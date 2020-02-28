@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import s from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <div className='content'>
+        <div className={s.content}>
         <div>
           <img src='https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png' />
         </div>
@@ -10,9 +11,9 @@ const Profile = () => {
         <div>
           My posts
           <div>New post</div>
-          <div>
-            <div>1</div>
-            <div>2</div>
+          <div className={s.posts}>
+            <div className={s.item}>1</div>
+            <div className={s.item}>2</div>
           </div>
         </div>
       </div>
