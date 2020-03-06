@@ -9,7 +9,6 @@ let postsElements =
   return <Post message={ post.postText } likesCount={ post.likesCount } />
 });
  
-console.log(props);
   return (
     <div className={s.postsBlock}>
       <h3>My posts</h3>
