@@ -3,7 +3,7 @@ import s from './Friend.module.css'
 import { NavLink } from 'react-router-dom';              
                 
 const Friend = (props) => {
-    console.log(props);
+   
     let path = "/friends/" + props.id;
     return (
         <span className={s.friendsContainer}>

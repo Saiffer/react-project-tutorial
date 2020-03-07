@@ -8,7 +8,7 @@ const Friends = (props) => {
         return <Friend id={friend.id} name={friend.name} />
     });
 
-    console.log(props);
+    
     return(
         <div className={s.friendsField}>
             <div className={s.item}>
