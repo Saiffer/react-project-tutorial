@@ -1,8 +1,6 @@
-let rerenderEntireTree = () => {
-  console.log('State has been changed');
-}
 
-let state = {
+let store = {
+  _state: {
     profilePage: {
       posts: [
         {id: 1, postText: 'Hi, how are you?', likesCount: 3},
@@ -11,6 +9,7 @@ let state = {
     ],
     newPostText: ''
     },
+    
     dialogsPage: {
       dialogs: [
         {id: 1, name: 'Dymich'},
@@ -31,30 +30,34 @@ let state = {
       {id: 2, name: 'Sveta'},
       {id: 3, name: 'Sasha'}
     ]
-}
-
-window.state = state;
-
-export const addPost = () => {
+},
+_rerenderEntireTree() {
+  console.log('State has been changed');
+},
+addPost() {
   let newPost = {
     id: 5,
-    postText: state.profilePage.newPostText,
+    postText: this._state.profilePage.newPostText,
     likesCount: 0
   };
 
-  state.profilePage.posts.push(newPost);
-  state.profilePage.newPostText = '';
-  rerenderEntireTree(state);
-}
-
-export const updateNewPostText = (newText) => {
-  state.profilePage.newPostText = newText;
-  rerenderEntireTree(state);
-}
-
-export const subscribe  = (observer) => {
-  rerenderEntireTree = observer;
+  this._state.profilePage.posts.push(newPost);
+  this._state.profilePage.newPostText = '';
+  this._rerenderEntireTree(this._state);
+},
+updateNewPostText(newText) {
+  this._state.profilePage.newPostText = newText;
+  this._rerenderEntireTree(this._state);
+},
+subscribe(observer) {
+  this._rerenderEntireTree = observer;
   
+},
+getState() {
+  return this._state;
+},
 }
 
-export default state;
+window.state = store;
+
+export default store;
