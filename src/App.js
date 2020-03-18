@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
+import Friends from './components/Friends/Friends';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import News from './components/News/News';
@@ -23,7 +24,7 @@ const App = (props) => {
 
           <Route path='/dialogs' render = { () => <Dialogs state = {props.state.dialogsPage} 
           dispatch = {props.dispatch} /> }/>
-          
+
           {/* <Route path='/friends' render= { () => <Friends state = {props.state.sidebar} /> } /> */}
           <Route path='/news' component= { News }/>
           <Route path='/music' component= { Music }/>

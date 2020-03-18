@@ -4,10 +4,10 @@ import Friend from './Friend'
 import { NavLink } from 'react-router-dom';
 
 const Friends = (props) => {
-    let friends = props.state.map((friend) => {
+    let friends = props.state.sidebar.map((friend) => {
+        console.log(friend);
         return <Friend id={friend.id} name={friend.name} />
     });
-
     
     return(
         <div className={s.friendsField}>
