@@ -62,4 +62,4 @@ this._rerenderEntireTree(this._state);
 
 window.state = store;
 console.log(store);
-export default store;
+//export default store;

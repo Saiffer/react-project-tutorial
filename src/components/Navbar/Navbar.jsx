@@ -5,6 +5,7 @@ import Friends from './../Friends/Friends'
 import { NavLink } from 'react-router-dom'
 
 const Navbar = (props) => {
+  
   return (
     <nav className={s.nav}>
       <div className={s.item}>
