@@ -9,7 +9,7 @@ const Friends = () => {
     let state = store.getState().sidebar;
     let friends = state.sidebar.map((friend) => {
         console.log(friend);
-        return <Friend id={friend.id} name={friend.name} />
+        return <Friend id={friend.id}  name={friend.name} />
     });
     
     return(

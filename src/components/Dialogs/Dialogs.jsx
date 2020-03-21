@@ -11,7 +11,7 @@ const Dialogs = (props) => {
   });
   let messageElements = 
       props.dialogsPage.messages.map((message) => {
-  return <Message message={ message.message } dispatch = {props.dispatch} />
+  return <Message message={ message.message }  dispatch = {props.dispatch} />
   });
 
   let sendMessage = () => {
